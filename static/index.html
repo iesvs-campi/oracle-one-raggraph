@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamaSupra Asistente</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="header">
+        GamaSupra Asistente
+        <p>Políticas de envío, reembolso, privacidad y términos</p>
+    </div>
+    
+    <div class="chat-history" id="chat-history">
+        <div class="message bot"><div>¡Hola! Soy el asistente virtual de GamaSupra. ¿En qué puedo ayudarte hoy con nuestras políticas?</div></div>
+    </div>
+    
+    <div class="loading" id="loading">El asistente está escribiendo...</div>
+
+    <div class="input-area">
+        <input type="text" id="user-input" placeholder="Escribe tu pregunta aquí..." autocomplete="off">
+        <button id="send-btn" onclick="sendMessage()">Enviar</button>
+    </div>
+</div>
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>
