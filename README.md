@@ -7,7 +7,7 @@
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![LangGraph](https://img.shields.io/badge/LangGraph-0.4%2B-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)](https://www.langchain.com/langgraph)
 [![Gemini 3.1 Flash Lite](https://img.shields.io/badge/Gemini_3.1_Flash_Lite-Google_AI-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
-[![Voyage AI](https://img.shields.io/badge/Voyage_AI-voyage--4--large-000000?style=for-the-badge&logo=openai&logoColor=white)](https://www.voyageai.com/)
+[![Voyage AI](https://img.shields.io/badge/Voyage_AI-voyage--4-000000?style=for-the-badge&logo=openai&logoColor=white)](https://www.voyageai.com/)
 [![FAISS](https://img.shields.io/badge/FAISS-Local_Vector_Store-0467DF?style=for-the-badge&logo=meta&logoColor=white)](https://github.com/facebookresearch/faiss)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 
@@ -103,6 +103,9 @@ La aplicación cuenta con una interfaz web dedicada (`static/index.html`) que se
 - Visualización dinámica de fuentes citadas por el LLM.
 - Prevención activa de inyecciones XSS en el renderizado de respuestas.
 
+![Demostración de la Interfaz Web](assets/webapp_live.png)
+*Vista de la aplicación web interactuando con el usuario.*
+
 ---
 
 ## Instalación y Desarrollo Local
@@ -153,6 +156,14 @@ El proyecto está optimizado para instancias de bajos recursos (ej. OCI VM.Stand
 2. **Filtrado de Tráfico (Cloudflare)**: Los dominios apuntan a Cloudflare para absorber ataques DDoS y filtrado de bots.
 3. **Restricción de Origen (UFW)**: El firewall del servidor (`ufw`) está configurado para rechazar cualquier conexión web que no provenga de los rangos de IP oficiales de Cloudflare, asegurando que el proxy inverso no pueda ser evadido.
 4. **Persistencia**: La aplicación se ejecuta como un demonio del sistema mediante `systemd`.
+   
+   ![Servicio systemd en ejecución](assets/raggraph_service.png)
+   *Captura de la terminal SSH mostrando el servicio FastAPI activo de forma persistente.*
+
+Adicionalmente, la instancia `amd-iota` opera de forma segura dentro de la Subred Pública de la red virtual de Oracle Cloud (VCN), como se detalla en el siguiente resumen de recursos e integración de seguridad:
+
+![Resumen de Recursos OCI](assets/amd_iota.png)
+*Detalles de red y resumen de recursos de la instancia desplegada en OCI.*
 
 ---
 
