@@ -103,9 +103,6 @@ La aplicación cuenta con una interfaz web dedicada (`static/index.html`) que se
 - Visualización dinámica de fuentes citadas por el LLM.
 - Prevención activa de inyecciones XSS en el renderizado de respuestas.
 
-![Demostración de la Interfaz Web](assets/webapp_live.png)
-*Vista de la aplicación web interactuando con el usuario.*
-
 ---
 
 ## Instalación y Desarrollo Local
@@ -164,6 +161,23 @@ Adicionalmente, la instancia `amd-iota` opera de forma segura dentro de la Subre
 
 ![Resumen de Recursos OCI](assets/amd_iota.png)
 *Detalles de red y resumen de recursos de la instancia desplegada en OCI.*
+
+---
+
+## Ejemplos de Uso
+
+A continuación, se presentan ejemplos reales de la capacidad del agente para resolver dudas basadas estrictamente en las políticas indexadas del e-commerce:
+
+**Ejemplo 1: Envíos y Tiempos de Entrega**
+- **Usuario:** *"¿Cuánto tardan los envíos al interior del país y tienen algún costo?"*
+- **Agente:** *"Los tiempos de envío son de 1 a 4 días hábiles, con un máximo de 10 días según tu ubicación. El costo se indica al realizar la compra y puede variar si cambias la dirección de entrega posteriormente. (Fuentes: politica_de_envio.pdf, terminos_de_servicio.html)."*
+
+**Ejemplo 2: Devoluciones y Garantías**
+- **Usuario:** *"Compré un producto hace 10 días pero ya no lo quiero, ¿puedo devolverlo?"*
+- **Agente:** *"Sí, bajo el derecho de retracto estás dentro del plazo de 10 días naturales. El producto debe estar sin uso y en su embalaje original. Deberás asumir los costos de envío y mandar el comprobante de compra a nuestro correo. (Fuentes: politica_de_envio.pdf, terminos_de_servicio.html, política_de_reembolso.docx)."*
+
+![Demostración de la Interfaz Web](assets/webapp_live.png)
+*Vista de la aplicación web interactuando y respondiendo consultas en tiempo real.*
 
 ---
 
